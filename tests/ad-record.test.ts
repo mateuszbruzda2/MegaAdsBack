@@ -1,7 +1,7 @@
 import { AdRecord } from "../record/ad.record"
 
 const defaultObj = {
-    id: 'Test Id',
+    id: '0',
     name: 'Test Name',
     description: 'blah',
     price: 0,
