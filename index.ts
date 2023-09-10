@@ -4,11 +4,14 @@ import 'express-async-errors';
 import { ValidationError, handleError } from "./utils/errors";
 import rateLimit from 'express-rate-limit';
 import { adRouter } from "./routers/ad.router";
+import { config } from "./config/config";
+
 
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    // origin: 'http://localhost:3000',
+    origin: config.corsOrigin,
 }));
 app.use(rateLimit({
   windowMs: 5 * 60 * 1000, // 15 minutes
